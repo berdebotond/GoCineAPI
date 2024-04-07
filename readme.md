@@ -1,6 +1,11 @@
 # Interview Test KenTech
 
-This project serves as a backend service for a user and film management system, leveraging Go, MongoDB, and the Gin framework to provide RESTful APIs. It facilitates operations such as user authentication, signup, login, and managing film data.
+Welcome to GoCineAPI, a comprehensive API designed for managing films and users lists, built with Go. This project was specifically created as part of a backend developer interview test for KenTech, showcasing best practices in API development using Go.
+
+GoCineAPI leverages JWT (JSON Web Token) for secure authentication, ensuring that only registered users can access and interact with the movie-related endpoints. Whether it's registering a new user, logging in, creating unique films, or managing a personal favorites list, GoCineAPI covers all bases, providing a solid foundation for any developer looking to implement or expand their understanding of such systems.
+
+For KenTech Interview
+This project was developed with a specific purpose—to address the requirements of a backend developer position at KenTech, showcasing a practical application of Go in solving real-world problems. It reflects a deep understanding of API development, secure authentication practices, and the efficient management of film data.
 
 ## Features
 
@@ -28,13 +33,13 @@ This project serves as a backend service for a user and film management system, 
 1. Clone the repository:
 
    ```bash
-   git clone https://yourrepositoryurl.com/project.git
+   git clone https://github.com/berdebotond/GoCineAPI.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd project-directory
+   cd GoCineAPI
    ```
 
 3. Install the Go dependencies:
@@ -87,7 +92,7 @@ Talend API Tester is a free standalone tool that allows you to test APIs and ana
 
 1. Download and install [Talend API Tester](https://www.talend.com/products/api-tester/).
 2. Start the application server.
-3. In Talend API Tester, import [text](talend_api_test_flow.json)
+3. In Talend API Tester, import talend_api_test_flow.json
 4. Send the request and analyze the response.
 
 #### Automated Integration Testing
@@ -99,5 +104,6 @@ Automated integration tests are written in Go and can be run with the `go test` 
 3. Run the following command to execute all tests in the project:
 
 ```bash
+docker-compose -f mongodb.yaml up -d
 go test ./...
 ```
