@@ -1,0 +1,370 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "5cd8ddae-ac29-4ed9-aec9-048a14055daf",
+        "name": "interview_test_kenteck"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Scenario",
+            "id": "4487acfe-94dc-49e3-915e-5e4afa78bb12",
+            "name": "auth"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBodyEditorHeight": 240,
+                  "textBody": "{\n\t\"username\": \"johdfnsx@woge.com\",\n\t\"password\": \"password1234\",\n\t\"user_type\": \"ADMIN\"\n}\n"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/users/signup"
+                },
+                "id": "c2758273-664e-412d-8a00-3884ec561adc",
+                "name": "singup",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n\t\"username\": \"johdfnsx@woge.com\",\n\t\"password\": \"password1234\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/users/login"
+                },
+                "id": "2af188f2-ad05-41ed-986a-ca378f9e6d76",
+                "name": "login",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/users/660ffc0bdd3459faf15e0b18"
+                },
+                "id": "feacb904-6daa-4890-b6fd-b7ed8b369e13",
+                "name": "users/{user_id}",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6IiIsIlVpZCI6IiIsIlVzZXJfdHlwZSI6IiIsImV4cCI6MTcxMjk0MDA3N30.rNCqpih8QU355uCzvFT38dWVYxJ5A91GQXQSwza2Emc"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/usersdata"
+                },
+                "id": "fd79e0a1-fe92-4cea-af39-c7100149e699",
+                "name": "usersdata",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaGZuc3hAd29nZS5jb20iLCJVaWQiOiI2NjEyNzRjOTMwNWY0NGEzYmY0OGVhMjAiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTcxMjQ4NjE3N30._VQXIOUpi0tAPCdJT6br8u60BL3cfrKc-NZi3Xt8vA4"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Scenario",
+            "id": "a4b85193-5516-43cb-a841-81ec40174471",
+            "name": "films"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBodyEditorHeight": 240,
+                  "textBody": "{\n\t\"title\": \"Updaddtghg556ccddded Film6 Title\",\n\t\"director\": \"Filmd Director\",\n\t\"releaseDate\": \"2023-01-01T00:00:00Z\",\n\t\"cast\": [\"Actor 1\", \"Actor 2\"],\n\t\"genre\": [\"Comedy\", \"Drama\"],\n\t\"synopsis\": \"This is a synopsis of the film.\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/films"
+                },
+                "id": "96cf6c09-d747-4f6b-a733-7bf945634bb7",
+                "name": "Add Film",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaGZuc3hAd29nZS5jb20iLCJVaWQiOiI2NjEyNzcwMDVlMDk3NjBjMWYwZDc3MjkiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTcxMjQ4Njc0NH0.ORCmVjxoJsmGUVtLRSqUoYcje2csvpqTFfZwsn8Kwtc"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/films"
+                },
+                "id": "e2f0eb11-2580-4d48-9a0a-21c20839f798",
+                "name": "Get Films",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaGZuc3hAd29nZS5jb20iLCJVaWQiOiI2NjEyNzcwMDVlMDk3NjBjMWYwZDc3MjkiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTcxMjQ4Njc0NH0.ORCmVjxoJsmGUVtLRSqUoYcje2csvpqTFfZwsn8Kwtc"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n\t\"title\": \" Titlvgcgfcde\",\n\t\"director\": \" Film Director\",\n\t\"releaseDate\": \"2023-01-01T00:00:00Z\",\n\t\"cast\": [\"Updated Acteor 1\", \"Updagfdated Actor 2\"],\n\t\"genre\": [\"Updated Coemedy\", \"Updafgdated Drama\"],\n\t\"synopsis\": \"This is an updezdfvaagfted synopsis of the film.\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/films/6612776d5e09760c1f0d772b"
+                },
+                "id": "16f1eb6e-8f9d-470a-a15c-bec8b797821d",
+                "name": "Update Film",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaGRmbnN4QHdvZ2UuY29tIiwiVWlkIjoiNjYxMjc3N2E1ZTA5NzYwYzFmMGQ3NzJjIiwiVXNlcl90eXBlIjoiQURNSU4iLCJleHAiOjE3MTI0ODY4NjZ9.YqU8NgIOQcJwqI70hCF5bQEQOSpk60W4tmrN2JnhbS4"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+                  "name": "DELETE"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/films/6612776d5e09760c1f0d772b"
+                },
+                "id": "c17c44d1-14cf-4c15-9a8d-0de3766a023b",
+                "name": "Delete Film",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaGZuc3hAd29nZS5jb20iLCJVaWQiOiI2NjEyNzcwMDVlMDk3NjBjMWYwZDc3MjkiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTcxMjQ4Njc0NH0.ORCmVjxoJsmGUVtLRSqUoYcje2csvpqTFfZwsn8Kwtc"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8123",
+                  "path": "/films/6611609db2cef4a660b76e04"
+                },
+                "id": "42623d2b-d673-4224-9ba8-a57b44292a57",
+                "name": "getFilm",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImpvaG5Ad29nZS5jb20iLCJVaWQiOiI2NjEwMzI3YjM4NzFiMDBjM2QzOWExNzIiLCJVc2VyX3R5cGUiOiJBRE1JTiIsIlVzZXJfaWQiOiI2NjEwMzI3YjM4NzFiMDBjM2QzOWExNzMiLCJleHAiOjE3MTI0MjM5MzF9.ZM2YEMLaNX3F7H0eF7ikMI4-X2F4-JZL0RvK2mtupc4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
